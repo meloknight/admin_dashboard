@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: blue;
+  --accent-color: yellow;
+  --secondary-color: grey;
+  --primary-font-color: black;
+  --secondary-font-color: grey;
+  --inverted-font-color: white;
+}
+
+body {
+  background-color: antiquewhite;
+}
