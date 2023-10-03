@@ -5,14 +5,153 @@
 }
 
 :root {
-  --primary-color: blue;
-  --accent-color: yellow;
-  --secondary-color: grey;
+  --primary-color: rgb(47, 179, 255);
+  --secondary-color: white;
+  --accent-color: rgb(255, 226, 95);
+  --tertiary-color: rgb(226, 226, 226);
   --primary-font-color: black;
   --secondary-font-color: grey;
   --inverted-font-color: white;
 }
 
-body {
-  background-color: antiquewhite;
+.body-container {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 1fr 5fr;
+}
+
+li {
+  list-style-type: none;
+}
+
+/* 
+------------------------------------------------------
+HEADER SECTION
+------------------------------------------------------
+*/
+
+header {
+  background-color: var(--secondary-color);
+  display: grid;
+  grid-template-columns: 5fr 2fr;
+  grid-template-rows: 2fr 3fr;
+}
+
+header > div {
+  /* border: 2px dashed red; */
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+}
+
+.searchbar {
+  height: 1.6rem;
+  width: calc(100% - 100px);
+  background-color: var(--tertiary-color);
+  border-radius: 10px;
+}
+
+.user-options-container {
+  /* display: grid;
+  grid-template-columns: 1fr 1fr 1fr; */
+}
+
+.user-options-container > button {
+  border: none;
+  padding: 10px 22px;
+  margin: auto 8px;
+  border-radius: 15px;
+  background-color: var(--primary-color);
+  color: var(--inverted-font-color);
+  font-weight: 600;
+}
+
+.user-greeting-container {
+  display: grid;
+  grid-template-columns: 1fr 12fr;
+
+  align-items: center;
+  /* border: 2px solid red; */
+  padding: 15px 40px;
+}
+
+#greeting {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+#username-and-handle {
+  font-weight: 700;
+  font-size: 1.7rem;
+}
+
+.profile-picture {
+  display: grid;
+  place-content: center;
+  height: 70px;
+  width: 70px;
+  background-color: var(--accent-color);
+  grid-row: 1 / span 2;
+  border-radius: 100%;
+  margin-right: 10px;
+}
+
+/* 
+------------------------------------------------------
+SIDEBAR SECTION
+------------------------------------------------------
+*/
+
+.sidebar {
+  padding: 1.5rem;
+  background-color: var(--primary-color);
+  grid-row: 1 / span 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  color: var(--inverted-font-color);
+
+  gap: 50px;
+}
+
+.sidebar-items {
+  margin-bottom: 10px;
+}
+
+/* 
+------------------------------------------------------
+MAIN CONTENT SECTION
+------------------------------------------------------
+*/
+
+.main-content {
+  background-color: var(--tertiary-color);
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+.main-content > div {
+  border: 2px solid red;
+}
+
+#your-projects-container {
+  grid-row: 1 / span 2;
+}
+
+#your-projects-container > h2,
+#project-card-container {
+  border: 2px solid green;
+}
+
+#your-projects-container > h2 {
+  height: 60px;
+  padding-left: 1rem;
+  padding-top: 25px;
+}
+
+#project-card-container {
+  height: calc(100% - 60px);
+  width: 100%;
 }
